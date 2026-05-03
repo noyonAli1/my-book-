@@ -153,7 +153,7 @@ const Navbar = () => {
 
           <div className="pt-6 space-y-3">
             <Link
-              href="/login"
+              href="/signin"
               onClick={() => setOpen(false)}
               className="block bg-purple-700 text-center py-2 rounded-md"
             >
@@ -161,13 +161,13 @@ const Navbar = () => {
             </Link>
 
             <Link
-              href="/register"
+              href="/signup"
               onClick={() => setOpen(false)}
               className="block border border-purple-500 text-center py-2 rounded-md"
             >
               Register
             </Link>
-          </div>
+          </div>n
 
         </div>
       </div>
