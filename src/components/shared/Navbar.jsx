@@ -71,18 +71,35 @@ const Navbar = () => {
         }
         {
           user && <div className="flex gap-3 items-center">
-            <Avatar className="w-8 h-8">
+            <Avatar size="sm">
               <Avatar.Image alt="John Doe" src={user?.image}
                 referrerPolicy="no-referrer"
               />
               <Avatar.Fallback>{user?.name?.split(" ").map((n) => n[0]).join("")}</Avatar.Fallback>
             </Avatar>
-            <button  className="btn btn-primary rounded-3xl px-3 py-1 text-sm" onClick={handleSignOut}>
+            <button  size="sm" className="btn btn-primary rounded-3xl px-3 py-1 text-sm" onClick={handleSignOut}>
               Sign Out
             </button>
           </div>
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
