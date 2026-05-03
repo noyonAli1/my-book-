@@ -5,7 +5,7 @@ const page = () => {
     return (
        <div className='bg-gray-100'>
          <div className='container mx-auto '>
-            {/* <AllBook></AllBook> */}
+            <AllBook></AllBook>
         </div>
        </div>
     );

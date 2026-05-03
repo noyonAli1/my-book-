@@ -4,18 +4,18 @@ import ReadingSection from '@/components/shared/ReadingSection';
 import WhyChoose from '@/components/shared/WhyChoose';
 import FeaturedBooks from '@/app/allcard/FeaturedBooks';
 
-const page =  () => {
+const page = async () => {
 
-  // const res = await fetch("https://add-to-book-map8.vercel.app/book.json");
-  // const data = await res.json();
+  const res = await fetch("https://my-book-l82f.vercel.app/book.json");
+  const data = await res.json();
 
   return (
     <>
       <Hader />
-      {/* <BreakingNews /> */}
+      <BreakingNews />
 
     
-      {/* <FeaturedBooks  /> */}
+      <FeaturedBooks data={data} />
 
 
       <WhyChoose />
