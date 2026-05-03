@@ -37,11 +37,9 @@ const Hader = () => {
 
             <Link
               href="/books"
-
+              className="mt-6 inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 px-5 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base"
             >
-              <button className="mt-6 bg-purple-600 hover:bg-purple-700 px-5 sm:px-6 py-2 sm:py-3 rounded-lg flex items-center gap-2 text-sm sm:text-base">
-                Browse Now →
-              </button>
+              Browse Now →
             </Link>
 
 
