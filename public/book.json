@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "category": "Story",
+    "available_quantity": 15,
+    "image_url": "https://covers.openlibrary.org/b/title/The%20Midnight%20Library-L.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://covers.openlibrary.org/b/title/Clean%20Code-L.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Astrophysics for People in a Hurry",
+    "author": "Neil deGrasse Tyson",
+    "category": "Science",
+    "available_quantity": 20,
+    "image_url": "https://covers.openlibrary.org/b/title/Astrophysics%20for%20People%20in%20a%20Hurry-L.jpg"
+  },
+  {
+    "id": 4,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "category": "Story",
+    "available_quantity": 25,
+    "image_url": "https://covers.openlibrary.org/b/title/The%20Alchemist-L.jpg"
+  },
+  {
+    "id": 5,
+    "title": "React Design Patterns",
+    "author": "Michele Bertoli",
+    "category": "Tech",
+    "available_quantity": 12,
+    "image_url": "https://covers.openlibrary.org/b/title/React%20Design%20Patterns-L.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Brief Answers to the Big Questions",
+    "author": "Stephen Hawking",
+    "category": "Science",
+    "available_quantity": 10,
+    "image_url": "https://covers.openlibrary.org/b/title/Brief%20Answers%20to%20the%20Big%20Questions-L.jpg"
+  },
+  {
+    "id": 7,
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "category": "Story",
+    "available_quantity": 18,
+    "image_url": "https://covers.openlibrary.org/b/title/The%20Kite%20Runner-L.jpg"
+  },
+  {
+    "id": 8,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "https://covers.openlibrary.org/b/title/The%20Pragmatic%20Programmer-L.jpg"
+  },
+  {
+    "id": 9,
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "category": "Science",
+    "available_quantity": 14,
+    "image_url": "https://covers.openlibrary.org/b/title/The%20Selfish%20Gene-L.jpg"
+  },
+  {
+    "id": 10,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "category": "Story",
+    "available_quantity": 30,
+    "image_url": "https://covers.openlibrary.org/b/title/The%20Great%20Gatsby-L.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Understanding Deep Learning",
+    "author": "Simon Prince",
+    "category": "Tech",
+    "available_quantity": 7,
+    "image_url": "https://covers.openlibrary.org/b/title/Understanding%20Deep%20Learning-L.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "category": "Science",
+    "available_quantity": 22,
+    "image_url": "https://covers.openlibrary.org/b/title/Cosmos-L.jpg"
+  }
+]
