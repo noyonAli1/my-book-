@@ -40,6 +40,18 @@ const SignupPage = () => {
 
     };
 
+      const handleGoogleSignIn = async () => {
+                await authClient.signIn.social({
+                    provider: "google",
+                });
+
+      }
+
+
+
+
+
+
     return (
         <div className="min-h-screen flex items-center justify-center p-4">
             <div className="flex w-full max-w-5xl bg-white rounded-3xl shadow-2xl overflow-hidden">
@@ -132,9 +144,14 @@ const SignupPage = () => {
 
 
 
-                        <button
+                       
+
+                    </form>
+
+                         <button 
+                         onClick={handleGoogleSignIn}
                             type="button"
-                            className="w-full py-3 rounded-xl border flex items-center justify-center gap-2 hover:bg-gray-50 transition"
+                            className="w-full mt-6 py-3 rounded-xl border flex items-center justify-center gap-2 hover:bg-gray-50 transition"
                         >
                             <img
                                 src="https://www.svgrepo.com/show/475656/google-color.svg"
@@ -155,7 +172,10 @@ const SignupPage = () => {
                             </Link>
                         </p>
 
-                    </form>
+
+
+
+
                 </div>
             </div>
         </div>

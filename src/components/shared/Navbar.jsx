@@ -5,8 +5,24 @@ import { useState } from "react";
 import { MdMenuBook } from "react-icons/md";
 import { HiMenu, HiX } from "react-icons/hi";
 import { usePathname } from "next/navigation";
+// import { auth } from "@/lib/auth";
+import { authClient } from "@/lib/auth-client";
+import { Avatar } from "@heroui/react";
+
 
 const Navbar = () => {
+
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
+  console.log(user);
+
+
+  const handleSignOut = async () => {
+    await authClient.signOut();
+  }
+
+
+
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -36,21 +52,37 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Button */}
-       <div className="flex gap-2">
-         <Link
-          href="/signin"
-          className="hidden md:block bg-purple-700 hover:bg-purple-800 px-5 py-2 rounded-md"
-        >
-          Login
-        </Link>
-        
-        <Link
-          href="/signup"
-          className="hidden md:block bg-purple-700 hover:bg-purple-800 px-5 py-2 rounded-md"
-        >
-          Register
-        </Link>
-       </div>
+        {!user &&
+          <div className="flex gap-2">
+            <Link
+              href="/signin"
+              className="hidden md:block bg-purple-700 hover:bg-purple-800 px-5 py-2 rounded-md"
+            >
+              Login
+            </Link>
+
+            <Link
+              href="/signup"
+              className="hidden md:block bg-purple-700 hover:bg-purple-800 px-5 py-2 rounded-md"
+            >
+              Register
+            </Link>
+          </div>
+        }
+        {
+          user && <div className="flex gap-3 items-center">
+            <Avatar>
+              <Avatar.Image alt="John Doe" src={user?.image}
+                referrerPolicy="no-referrer"
+              />
+              <Avatar.Fallback>{user?.name?.split(" ").map((n) => n[0]).join("")}</Avatar.Fallback>
+            </Avatar>
+            <button className="btn btn-primary rounded-3xl" onClick={handleSignOut}>
+              Sign Out
+            </button>
+          </div>
+
+        }
 
 
 
@@ -118,7 +150,7 @@ const Navbar = () => {
             My Profile
           </Link>
 
-          
+
           <div className="pt-6 space-y-3">
             <Link
               href="/login"

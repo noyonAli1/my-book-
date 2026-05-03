@@ -13,7 +13,6 @@ const SignupPage = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
 
-
         const email = e.target.email.value;
 
         const password = e.target.password.value;
@@ -33,6 +32,17 @@ const SignupPage = () => {
 
         router.push("/");
     };
+
+
+  const handleGoogleSignIn = async () => {
+                await authClient.signIn.social({
+                    provider: "google",
+                });
+
+      }
+
+
+
 
     return (
         <div className="min-h-screen flex items-center justify-center p-4">
@@ -58,9 +68,6 @@ const SignupPage = () => {
                     <form onSubmit={onSubmit} className="space-y-4">
 
 
-
-
-
                         <TextField
                             isRequired
                             name="email"
@@ -77,10 +84,6 @@ const SignupPage = () => {
                             <Input className="w-full mt-1 px-4 py-3 rounded-xl border" placeholder="john@example.com" />
                             <FieldError />
                         </TextField>
-
-
-
-
 
                         <TextField
                             isRequired
@@ -108,12 +111,13 @@ const SignupPage = () => {
                             Sign Up
                         </button>
 
+                        
 
-
-
-                        <button
+                    </form>
+                     <button
+                     onClick={handleGoogleSignIn}
                             type="button"
-                            className="w-full py-3 rounded-xl border flex items-center justify-center gap-2 hover:bg-gray-50 transition"
+                            className="w-full py-3 mt-6 rounded-xl border flex items-center justify-center gap-2 hover:bg-gray-50 transition"
                         >
                             <img
                                 src="https://www.svgrepo.com/show/475656/google-color.svg"
@@ -134,7 +138,10 @@ const SignupPage = () => {
                             </Link>
                         </p>
 
-                    </form>
+
+
+
+
                 </div>
             </div>
         </div>
