@@ -98,7 +98,7 @@ const SignupPage = () => {
                             }}
                         >
                             <Label>Password</Label>
-                            <Input className="w-full mt-1 px-4 py-3 rounded-xl border" placeholder="••••••••" />
+                            <Input className="w-full mt-1 px-4 py-3 rounded-xl border" placeholder="Enter password" />
                             <FieldError />
                         </TextField>
 
@@ -131,10 +131,10 @@ const SignupPage = () => {
                         <p className="text-center text-sm text-gray-600 mt-4">
                             Already have an account?
                             <Link
-                                href="/signin"
+                                href="/signup"
                                 className="text-purple-600 font-medium hover:underline"
                             >
-                                Login here
+                                Sign up here
                             </Link>
                         </p>
 

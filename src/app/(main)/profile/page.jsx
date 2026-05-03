@@ -1,14 +1,28 @@
 "use client";
+import { Avatar } from "@heroui/react";
 import Link from "next/link";
 import { FaUser, FaEnvelope, FaImage, FaBook } from "react-icons/fa";
 import { MdDataThresholding, MdManageAccounts } from "react-icons/md";
+import { authClient } from "@/lib/auth-client";
 
-
+// import { redirect } from "next/navigation";
 const page = () => {
+
+    const userData = authClient.useSession();
+    const user = userData.data?.user;
+
+
+
+//   if (!user) {
+//     redirect("/signin");
+//   }
+
+
+
     return (
         <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
 
-            
+
             <div className="w-full max-w-4xl bg-white shadow-xl rounded-2xl p-8 md:p-10">
 
                 {/* Top Section */}
@@ -16,16 +30,19 @@ const page = () => {
 
                     <div className="flex items-center gap-5">
 
-                        <div className="w-[80px] h-[80px] rounded-full bg-gray-300 flex items-center justify-center text-gray-600 text-sm font-medium">
-                            Image
-                        </div>
+                        <Avatar>
+                            <Avatar.Image alt="John Doe" src={user?.image}
+                                referrerPolicy="no-referrer"
+                            />
+                            <Avatar.Fallback>{user?.name?.split(" ").map((n) => n[0]).join("")}</Avatar.Fallback>
+                        </Avatar>
 
                         <div>
                             <h2 className="text-2xl font-semibold text-gray-800">
-                                Tanvir Ahmed
+                                {user?.name || "Noyon RAj"}
                             </h2>
                             <p className="text-purple-600 text-sm">
-                                tanvir@example.com
+                                {user?.email || "noyon@example.com"}
                             </p>
                             <p className="text-gray-400 text-xs mt-1">
                                 Member Since: May 15, 2024
@@ -51,7 +68,7 @@ const page = () => {
                                 <FaUser /> Full Name
                             </span>
                             <span className="text-gray-800 font-medium">
-                                Tanvir Ahmed
+                                {user?.name || "Noyon Raj"}
                             </span>
                         </div>
 
@@ -61,7 +78,7 @@ const page = () => {
                                 <FaEnvelope /> Email Address
                             </span>
                             <span className="text-gray-800 font-medium">
-                                tanvir@example.com
+                                {user?.email || "Noyon@example.com"}
                             </span>
                         </div>
 
@@ -71,7 +88,7 @@ const page = () => {
                                 <FaImage /> Photo URL
                             </span>
                             <span className="text-gray-800 font-medium truncate max-w-[180px]">
-                                https://example.com/photo.jpg
+                                {user?.image || "https://img.heroui.chat/image/avatar?w=400&h=400&u=3"}
                             </span>
                         </div>
 
@@ -81,7 +98,7 @@ const page = () => {
                                 <FaBook /> Total Borrowed
                             </span>
                             <span className="text-gray-800 font-medium">
-                                5 Books
+                               {2} Books
                             </span>
                         </div>
 

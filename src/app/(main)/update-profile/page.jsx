@@ -1,69 +1,80 @@
+"use client";
+
 import React from 'react';
 import Image from "next/image";
+import { authClient } from "@/lib/auth-client";
+import Link from 'next/link';
 const UpdateProfile = () => {
+
+    const onSubmit = async(e) => {
+        e.preventDefault();
+
+        const name = e.target.name.value;
+        const image = e.target.image.value;
+           
+
+        await authClient.updateUser({
+            name,
+            image,
+        });
+        console.log(name, image);   
+    };
+
     return (
         <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-
             <div className="w-full max-w-5xl bg-white rounded-2xl shadow-xl p-6 md:p-10">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-                    {/* LEFT - FORM */}
+                    {/* LEFT */}
                     <div>
                         <h2 className="text-2xl font-semibold text-gray-800">
                             Update Your Information
                         </h2>
-                        <p className="text-gray-500 text-sm mt-1">
-                            Make changes to your profile
-                        </p>
 
-                        <div className="mt-6 space-y-5">
+                        <form className="mt-6 space-y-5" onSubmit={onSubmit}>
 
-                            {/* Full Name */}
                             <div>
                                 <label className="text-sm text-gray-600">Full Name</label>
                                 <input
+                                placeholder='Inter change name'
+                                    name='name'
                                     type="text"
-                                    defaultValue="Update Your Name"
-                                    className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 outline-none"
+                                    className="w-full mt-1 px-4 py-2 border rounded-lg"
                                 />
                             </div>
 
-                            {/* Photo URL */}
                             <div>
                                 <label className="text-sm text-gray-600">Photo URL</label>
                                 <input
+                                placeholder='Enter photo URL'
+                                    name='image'
                                     type="text"
-                                    defaultValue="https:/photo.jpg"
-                                    className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 outline-none"
+                                    className="w-full mt-1 px-4 py-2 border rounded-lg"
                                 />
                             </div>
 
-                            {/* Buttons */}
-                            <div className="flex gap-3 pt-2">
-                                <button className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg text-sm transition">
+                            <div className="flex gap-20 pt-2">
+                                <button type='submit' className="bg-purple-600 text-white px-5 py-2 rounded-lg">
                                     Update Information
                                 </button>
 
-                                <button className="border px-5 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100 transition">
-                                    Cancel
-                                </button>
+                                
+
+                               <Link href="/profile" className="btn btn-primary rounded-lg">
+                                    Back to Profile
+                                </Link>
                             </div>
 
-                        </div>
+                        </form>
                     </div>
 
-                    {/* RIGHT - EMPTY (for image later) */}
+                    {/* RIGHT */}
                     <div className="hidden md:flex items-center justify-center h-full">
-
-                        <div className="w-full h-[300px] border-2 border border-gray-300 rounded-xl flex items-center justify-center text-gray-400">
-                            <Image src="/data-in.png" alt="Placeholder" width={800} height={700} />
-                        </div>
-
+                        <Image src="/data-in.png" alt="Placeholder" width={800} height={700} />
                     </div>
 
                 </div>
-
             </div>
         </div>
     );

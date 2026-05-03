@@ -35,23 +35,23 @@ const Navbar = () => {
   return (
     <div className="bg-[#0f172a] sticky top-0 z-50">
 
-      {/* Top Navbar */}
+  
       <div className="container mx-auto px-6 py-4 flex justify-between items-center text-white">
 
-        {/* Logo */}
+       
         <h1 className="text-xl font-bold flex items-center gap-2">
           <MdMenuBook className="text-2xl text-purple-600" />
           <span className="text-blue-500">Book</span> Nest
         </h1>
 
-        {/* Desktop Menu */}
+        
         <div className="hidden md:flex gap-6">
           <Link href="/" className={activeClass("/")}>Home</Link>
           <Link href="/books" className={activeClass("/books")}>All Books</Link>
           <Link href="/profile" className={activeClass("/profile")}>My Profile</Link>
         </div>
 
-        {/* Desktop Button */}
+        
         {!user &&
           <div className="flex gap-2">
             <Link
@@ -89,7 +89,7 @@ const Navbar = () => {
 
 
 
-        {/* Mobile Menu Button */}
+    
         <button
           onClick={() => setOpen(true)}
           className="md:hidden text-2xl"
@@ -98,7 +98,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Overlay */}
+   
       {open && (
         <div
           onClick={() => setOpen(false)}
@@ -106,12 +106,12 @@ const Navbar = () => {
         />
       )}
 
-      {/* Sidebar */}
+
       <div
         className={`fixed top-0 left-0 h-full w-[80%] max-w-sm bg-[#1e293b] z-50 transform transition-transform duration-300 ${open ? "translate-x-0" : "-translate-x-full"
           }`}
       >
-        {/* Sidebar Header */}
+       
         <div className="flex justify-between items-center px-6 py-4 text-white border-b border-gray-700">
           <h1 className="text-lg font-bold flex items-center gap-2">
             <MdMenuBook className="text-xl text-purple-500" />
@@ -123,7 +123,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Sidebar Links */}
+       
         <div className="px-6 py-6 space-y-5 text-white">
 
           <Link
