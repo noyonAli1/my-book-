@@ -45,7 +45,7 @@ const page = () => {
                                 {user?.email || "noyon@example.com"}
                             </p>
                             <p className="text-gray-400 text-xs mt-1">
-                                Member Since: May 15, 2024
+                                may-01-05-2026
                             </p>
                         </div>
                     </div>

@@ -28,10 +28,10 @@ const SignupPage = () => {
         });
 
         console.log({ data, error });
-        // if (error) {
-        //     alert(error.message);
-        //     return;
-        // }
+        if (error) {
+            alert(error.message);
+            return;
+        }
 
 
         if (!error) {

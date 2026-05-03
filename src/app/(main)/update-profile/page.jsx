@@ -54,7 +54,7 @@ const UpdateProfile = () => {
                                 />
                             </div>
 
-                            <div className="flex gap-20 pt-2">
+                            <div className="flex lg:gap-20 pt-2 gap-4">
                                 <button type='submit' className="bg-purple-600 text-white px-5 py-2 rounded-lg">
                                     Update Information
                                 </button>
