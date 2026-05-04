@@ -83,31 +83,8 @@ const Navbar = () => {
           </div>
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-        <button
+  
+       <button
           onClick={() => setOpen(true)}
           className="md:hidden text-2xl"
         >

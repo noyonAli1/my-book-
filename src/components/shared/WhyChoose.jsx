@@ -7,12 +7,12 @@ const WhyChoose = () => {
             <div className="container mx-auto px-4">
 
                 {/* Title */}
-                <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 animate__animated animate__shakeX">
                     Why Choose <span className="text-purple-600">BookNest?</span>
                 </h2>
 
                 {/* Cards */}
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 py-5">
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 py-5 animate__animated animate__slideInDown">
 
                     {/* Card 1 */}
                     <div className="group bg-white p-6  rounded-xl shadow-sm hover:shadow-lg transition duration-300 text-center">
