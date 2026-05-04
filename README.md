@@ -2,11 +2,11 @@
 
 ## 🔗 Live Links
 
-* 🌐 Live link: 
+* 🌐 Live link: https://my-book-l82f.vercel.app/
 
 
 ## 💻 GitHub Repository
-Git hubrepo:
+Git hubrepo: https://github.com/noyonAli1/my-book-
 
 
 ---
